@@ -22,6 +22,7 @@ class App extends React.Component {
         "sender": {
           "name": "Ironman",
           "uid": "user1",
+          "time": new Date(),
           "avatar": "https://data.cometchat.com/assets/images/avatars/ironman.png",
         },
       },
@@ -31,6 +32,7 @@ class App extends React.Component {
         "sender": {
           "name": "Spiderman",
           "uid": "user2",
+          "time": new Date(),
           "avatar": "https://data.cometchat.com/assets/images/avatars/spiderman.png",
         },
       },
@@ -40,6 +42,7 @@ class App extends React.Component {
         "sender": {
           "name": "Ironman",
           "uid": "user1",
+          "time": new Date(),
           "avatar": "https://data.cometchat.com/assets/images/avatars/ironman.png",
         },
       },

@@ -37,28 +37,33 @@ class MessageList extends React.Component {
         else {
           let isUser = user.uid === message.sender.uid;
           let renderName;
-          if (isUser) {
-            renderName = null;
-          } else {
-            renderName = <div className='sender-name'>{message.sender.name}</div>;
-          }
+          // if (isUser) {
+          //   renderName = null;
+          // } else {
+          //   renderName = <div className='sender-name'>{message.sender.name}</div>;
+          // }
           return (
             <div
               key={message.id}
               className='chat-bubble-row'
               style={{flexDirection: isUser ? 'row-reverse' : 'row'}}>
-              <img
+              {/* <img
                 src={message.sender.avatar}
                 alt='sender avatar'
                 className='avatar'
                 style={isUser ? {marginLeft: '15px'} : {marginRight: '15px'}}
-              />
+              /> */}
               <div className={`chat-bubble ${isUser ? 'is-user' : 'is-other'}`}>
                 {renderName}
                 <div
                   className='message'
-                  style={{color: isUser ? '#FFF' : '#2D313F'}}>
+                  style={{color: isUser ? 'white' : 'white'}}>
                   {message.text}
+                </div>
+                <div
+                  className='message'
+                  style={{color: isUser ? 'white' : 'white', fontSize:"10px"}}>
+                  {message.sender.time.toLocaleTimeString()}
                 </div>
               </div>
             </div>
